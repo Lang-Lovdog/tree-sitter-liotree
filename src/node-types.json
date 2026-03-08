@@ -1,0 +1,373 @@
+[
+  {
+    "type": "comment",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "comment_closed",
+          "named": true
+        },
+        {
+          "type": "comment_content",
+          "named": true
+        },
+        {
+          "type": "comment_open",
+          "named": true
+        },
+        {
+          "type": "comment_text",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "comment_bar",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "comment_content",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "comment_newline",
+          "named": true
+        },
+        {
+          "type": "comment_text",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "comment_newline",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "comment_bar",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "content_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "directory_entry",
+          "named": true
+        },
+        {
+          "type": "file_entry",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "directory_entry",
+    "named": true,
+    "fields": {
+      "bridge": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "depth_mark",
+            "named": true
+          }
+        ]
+      },
+      "contents": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "content_block",
+            "named": true
+          }
+        ]
+      },
+      "leaf": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "depth_mark",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "directory_name",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "entry_bar",
+          "named": true
+        },
+        {
+          "type": "scope_delimiter_closed",
+          "named": true
+        },
+        {
+          "type": "scope_delimiter_open",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "directory_name",
+    "named": true,
+    "fields": {
+      "formatspace": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "format_space",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "entry_bar",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "file_entry",
+    "named": true,
+    "fields": {
+      "bridge": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "depth_mark",
+            "named": true
+          }
+        ]
+      },
+      "leaf": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "depth_mark",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "file_name",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "entry_bar",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "file_name",
+    "named": true,
+    "fields": {
+      "formatspace": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "format_space",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "root",
+    "named": true,
+    "fields": {
+      "contents": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "content_block",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "directory_name",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "comment",
+          "named": true
+        },
+        {
+          "type": "root_bar",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "root_bar",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "scope_delimiter_closed",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "comment",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "scope_delimiter_open",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "comment",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "root": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "root",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": " ",
+    "named": false
+  },
+  {
+    "type": "comment_closed",
+    "named": true
+  },
+  {
+    "type": "comment_open",
+    "named": true
+  },
+  {
+    "type": "comment_text",
+    "named": true
+  },
+  {
+    "type": "depth_mark",
+    "named": true
+  },
+  {
+    "type": "format_space",
+    "named": true
+  },
+  {
+    "type": "|",
+    "named": false
+  },
+  {
+    "type": "|=-",
+    "named": false
+  },
+  {
+    "type": "|==",
+    "named": false
+  }
+]
